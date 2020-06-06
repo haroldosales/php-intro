@@ -9,7 +9,27 @@ $categoria[] = 'idoso';
 
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
+//empty == vazio
+if(empty($nome))
+{
+  echo "O nome nao pode ser vazil";
+  return;
+}
+//strlen quantidade de caracter
+if(strlen($nome)<3)
+{
+  echo "nome deve conter mais de 3 caracter";
+  return;
+}
 
+if(strlen($nome) > 40){
+  echo "O Nome nao pode ser muit longo";
+  return;
+}
+//conferir o numeric
+if(!is_numeric($idade)){
+      echo "Informe numero para idade";
+}
 
 if($idade >= 6 && $idade<=17)
 {
