@@ -18,7 +18,7 @@ session_start();
 <?php
 
 $messagemDeSucesso = isset($_SESSION['mesagem-de-sucesso'])? $_SESSION['mesagem-de-sucesso']: '';
-if (empty($messagemDeSucesso)) {
+if (!empty($messagemDeSucesso)) {
   # code...
   echo $messagemDeSucesso;
 }

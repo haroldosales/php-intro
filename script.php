@@ -32,29 +32,29 @@ else if(strlen($nome)<3)
   return;
 }
 //conferir o numeric
-if(!is_numeric($idade)){
+else if(!is_numeric($idade)){
   $_SESSION['mesagem-de-erro'] = 'A idade so pode possuir numeros';
   header('Location:index.php');
   return;
 }
 
-if($idade >= 6 && $idade<=17)
+ if($idade >= 6 && $idade<=17)
 {
   for($i = 0 ; $i <= count($categoria);$i++)
   {
     if($categoria[$i] == 'infantil')
     $_SESSION['mesagem-de-sucesso']= " o natador ".$nome. " compente na categoria " . $categoria[$i];
     header('Location:index.php');
-  return;
+  
   }
-}else if($idade >=18 && $idade <=25 )
+} if($idade >=18 && $idade <=25 )
 {
   for($i = 0 ; $i <= count($categoria);$i++)
   {
     if($categoria[$i]== 'adolecente')
     $_SESSION['mesagem-de-sucesso'] = " o natador ".$nome. " compente na categoria " .$categoria[$i];
     header('Location:index.php');
-  return;
+  
   }
 }else if($idade >=26 && $idade <=30 )
 {
@@ -63,7 +63,7 @@ if($idade >= 6 && $idade<=17)
     if($categoria[$i]== 'adulto')
     $_SESSION['mesagem-de-sucesso'] = " o natador ".$nome. " compente na categoria " .$categoria[$i];
     header('Location:index.php');
-  return;
+  
   }
 }else if($idade >=60 )
 {
@@ -72,7 +72,7 @@ if($idade >= 6 && $idade<=17)
     if($categoria[$i]== 'idoso')
     $_SESSION['mesagem-de-sucesso'] = " o natador ".$nome. " compente na categoria " .$categoria[$i];
     header('Location:index.php');
-  return;
+  
   }
 }
 
