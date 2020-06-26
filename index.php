@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 ?>
@@ -13,7 +14,7 @@ session_start();
   <body>
 
     <p>Formulario PARA INSCRIÇAO DE COMPOETIDORES</p>
-   
+
 <form action="script.php" method="post">
 <?php
 
