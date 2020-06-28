@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 function setarMensagemSucesso(string $mensagem): void
@@ -33,14 +34,17 @@ function obterMensagemError() : ?string
 function removerMensagemSucesso() :void
 {
   if(isset($_SESSION['mensagem-de-sucesso']))
-    unset $_SESSION['mensagem-de-sucesso']
+
+    unset ($_SESSION['mensagem-de-sucesso']);
 
 }
 //unset serve para eliminar
 function removerMensagemErro() :void
 {
   if(isset($_SESSION['mensagem-de-erro']))
-    unset $_SESSION['mensagem-de-erro']
+    unset ( $_SESSION['mensagem-de-erro']);
 
 }
+
+
  ?>
